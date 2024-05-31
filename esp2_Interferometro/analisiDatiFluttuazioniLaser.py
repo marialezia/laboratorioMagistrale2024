@@ -13,12 +13,12 @@ def chi2(oss, att, ossErr):
 
 
 
-nomeFile1 = 'C:\\Users\\Mari\\Desktop\\michelson\\datiLaser\\fotodiodoProva1Guadagno60.csv'
-nomeFile2= 'C:\\Users\\Mari\\Desktop\\michelson\\datiLaser\\fotodiodoProva2Guadagno60.csv'
-nomeFile3 = 'C:\\Users\\Mari\\Desktop\\michelson\\datiLaser\\fotodiodoProva4Guadagno60.csv'
-nomeFile4= 'C:\\Users\\Mari\\Desktop\\michelson\\datiLaser\\fotodiodoProva5Guadagno60.csv'
-nomeFile5 = 'C:\\Users\\Mari\\Desktop\\michelson\\datiLaser\\fotodiodoProva6Guadagno60.csv'
-nomeFile6= 'C:\\Users\\Mari\\Desktop\\michelson\\datiLaser\\fotodiodoProva7Guadagno60.csv'
+nomeFile1 = 'fotodiodoProva1Guadagno60.csv'
+nomeFile2= 'fotodiodoProva2Guadagno60.csv'
+nomeFile3 = 'fotodiodoProva4Guadagno60.csv'
+nomeFile4= 'fotodiodoProva5Guadagno60.csv'
+nomeFile5 = 'fotodiodoProva6Guadagno60.csv'
+nomeFile6= 'fotodiodoProva7Guadagno60.csv'
 
 dati1 = pd.read_csv(nomeFile1)
 vEff1 = dati1['voltaggioEffettivo'][2:]
