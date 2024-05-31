@@ -42,7 +42,7 @@ def chi2(oss, att, ossErr):
     return ((att-oss)/ ossErr)**2
 
 #estrapolo dati dal file csv che voglio leggere 
-nomeFile = 'C:\\Users\\Mari\\Desktop\\michelson\\dati\\michelsonPasso0.2Prova5Guadagno60.csv'
+nomeFile = 'michelsonPasso0.2Prova5Guadagno60.csv'
 dati = pd.read_csv(nomeFile)
 vEff = dati['voltaggioEffettivo']
 mediaArr = dati['media']
