@@ -42,7 +42,7 @@ def chi2(oss, att, ossErr):
     return ((att-oss)/ ossErr)**2
 
 #estrapolo dati dal file csv che voglio leggere 
-nomeFile = 'michelsonPasso0.2Prova5Guadagno60.csv'
+nomeFile = 'C:\\Users\\Mari\\Desktop\\michelson\\dati\\michelsonPasso0.2Prova5Guadagno60.csv'
 dati = pd.read_csv(nomeFile)
 vEff = dati['voltaggioEffettivo']
 mediaArr = dati['media']
@@ -51,6 +51,9 @@ mediaErr = dati['erroreMedia']
 #valori offset e rumore per calcolare errore sulla tensione misurata
 offset= 0.001
 noise = 0.0008
+
+#calcolo errore di quantizzazione
+erroreADC = 10/2**11/np.sqrt(12)
 
 #associamo al voltaggio effettivo un errore che è proporzionale al valore del voltaggio: con un if controllo valore voltaggio e associo errore
 vEffErr = np.zeros(len(vEff))
@@ -63,7 +66,7 @@ for i in range(len(vEffErr)):
         vEffErr[i] = vEff[i] * 0.00015 + 0.0024
         
 #aggiungo in quadratura errori alla tensione misurata legati a offset, rumore e proietto l'errore del voltaggio effettivo
-mediaErrTot = np.sqrt(mediaErr**2 + offset**2 + noise**2+vEffErr**2)
+mediaErrTot = np.sqrt(mediaErr**2 + offset**2 + noise**2+vEffErr**2+ erroreADC**2)
 
 
 #PRIMA PARTE: INTERVALLO UNICO 
