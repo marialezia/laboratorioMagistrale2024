@@ -1,1 +1,0 @@
-descrizione breve dei programmi
