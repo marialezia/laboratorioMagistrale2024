@@ -213,7 +213,7 @@ costArrayErr = piezoErr(w, wErr, laser, laserErr)
 
 #calcolo lo spostamento massimo 
 spostamentoMaxInt = costArray[0]*26+costArray[1]*6+costArray[2]*6+costArray[3]*6+costArray[4]*6+costArray[5]*6+costArray[6]*6+costArray[7]*6+costArray[8]*(150-74)
-spostamentoMaxIntErr = np.sqrt((26*costArrayErr[0])**2+(6*costArrayErr[1])**2+(6*costArrayErr[2])**2+(6*costArrayErr[3])**2(6*costArrayErr[4])**2(6*costArrayErr[5])**2+(6*costArrayErr[6])**2+(6*costArrayErr[7])**2+(82*costArrayErr[8])**2)
+spostamentoMaxIntErr = np.sqrt((26*costArrayErr[0])**2+(6*costArrayErr[1])**2+(6*costArrayErr[2])**2+(6*costArrayErr[3])**2+(6*costArrayErr[4])**2+(6*costArrayErr[5])**2+(6*costArrayErr[6])**2+(6*costArrayErr[7])**2+(82*costArrayErr[8])**2)
 print('spostamento massimo unico intervallo = ', spostamentoMaxInt, ' +- ', spostamentoMaxIntErr)
 
 
